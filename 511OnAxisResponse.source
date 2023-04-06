@@ -1,0 +1,19 @@
+Version         1
+Geometry        ComptonSphere.geo.setup
+
+# Physics list
+PhysicsListEM             LivermorePol
+
+# Output formats
+StoreSimulationInfo       init-only
+
+Run SpaceSim
+SpaceSim.FileName         FlatContinuumIsotropic
+SpaceSim.NTriggers        10000000
+
+SpaceSim.Source Maxi
+Maxi.ParticleType         1
+Maxi.Beam                 FarFieldPointSource  0  0 
+Maxi.Spectrum             Mono 511
+Maxi.Flux                 1.0
+Maxi.Polarization         Random
